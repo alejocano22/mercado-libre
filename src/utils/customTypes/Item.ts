@@ -4,6 +4,7 @@ export interface ItemI {
   author: string;
   title: string;
   price: number;
+  picture: string;
 }
 
 export interface DetailedItemI extends ItemI {

@@ -6,6 +6,7 @@ export const toItem = (item: any): ItemI => {
     author: item.seller.nickname,
     title: item.title,
     price: item.price,
+    picture: item.thumbnail,
   };
 }
 
@@ -22,6 +23,7 @@ export const toDetailedItem = (item: any, description: any): DetailedItemI => {
     author: item.site_id,
     title: item.title,
     price: item.price,
+    picture: item.pictures[0].url,
     description: description.plain_text,
   };
 };

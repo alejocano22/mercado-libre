@@ -16,8 +16,9 @@
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@screens/*": ["./src/screens/*"],
       "@customTypes/*": ["./src/utils/customTypes/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@services/*": ["./src/services/*"],
       "@utils/*": ["./src/utils/*"]
     }
   },
