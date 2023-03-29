@@ -1,18 +1,20 @@
-import { DetailedItemI } from '@/utils/customTypes/Item';
+import { DetailedItemI } from '@/customTypes/Item';
 import styles from './ProductScreen.module.css';
 
 const ProductScreen = ({
-  id, title, author, price, picture, description
+  id, title, price, picture, description
 }: DetailedItemI) => {
   return (
     <div className={styles.productContainer}>
       <div className={styles.productCard}>
         <div className={styles.mainProductSection}>
-          <img
-            src={picture}
-            alt='product image'
-            className={styles.productImage}
-          />
+          <div className={styles.productImageContainer}>
+            <img
+              src={picture}
+              alt='product image'
+              className={styles.productImage}
+            />
+          </div>
           <div className={styles.productDescriptionContainer}>
             <h3 className={styles.productDescriptionTitle}>
               Descripción del producto
@@ -21,9 +23,8 @@ const ProductScreen = ({
           </div>
         </div>
         <div className={styles.secondaryProductSection}>
-          <p className={styles.productLabel}>{author}</p>
           <p className={styles.productTitle}>{title}</p>
-          <p className={styles.productPrice}>$ {price}</p>
+          <p className={styles.productPrice}>$ {price.amount}</p>
           <button className={styles.productBuyButton}>Comprar</button>
         </div>
       </div>
