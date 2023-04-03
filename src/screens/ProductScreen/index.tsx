@@ -1,9 +1,25 @@
 import { DetailedItemI } from '@/customTypes/Item';
 import styles from './ProductScreen.module.css';
+import { MainButton } from '@/components/buttons';
+import { Paragraph, Price, Title, Subtitle } from '@/components/texts';
 
 const ProductScreen = ({
-  id, title, price, picture, description
+  condition,
+  description,
+  id,
+  link,
+  picture,
+  price,
+  soldQuantity,
+  title,
 }: DetailedItemI) => {
+  const handleOnClick = () => {
+    window.open(
+      link,
+      '_blank'
+    );
+  }
+
   return (
     <div className={styles.productContainer}>
       <div className={styles.productCard}>
@@ -16,16 +32,18 @@ const ProductScreen = ({
             />
           </div>
           <div className={styles.productDescriptionContainer}>
-            <h3 className={styles.productDescriptionTitle}>
-              Descripción del producto
-            </h3>
-            <p className={styles.productDescription}>{description}</p>
+            <Subtitle hierarchy='h4' text='Descripción del producto' />
+            <Paragraph text={description} size='default' />
           </div>
         </div>
         <div className={styles.secondaryProductSection}>
-          <p className={styles.productTitle}>{title}</p>
-          <p className={styles.productPrice}>$ {price.amount}</p>
-          <button className={styles.productBuyButton}>Comprar</button>
+          <Subtitle
+            hierarchy='h2'
+            text={`${condition} - ${soldQuantity} vendidos`}
+          />
+          <Title text={title} />
+          <Price price={price.amount} size='default'></Price>
+          <MainButton color='blue' text='Comprar' onClick={handleOnClick} />
         </div>
       </div>
     </div>

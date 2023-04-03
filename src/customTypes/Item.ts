@@ -5,6 +5,7 @@ export interface ItemI {
   picture: string;
   condition: string;
   freeShipping: boolean;
+  city: string;
 }
 
 export interface PriceI {
@@ -13,8 +14,8 @@ export interface PriceI {
   decimals: number;
 }
 
-
 export interface DetailedItemI extends ItemI {
   description: string;
   soldQuantity: string;
+  link: string;
 }

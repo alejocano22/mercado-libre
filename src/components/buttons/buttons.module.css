@@ -1,0 +1,35 @@
+.mainButton {
+  margin-top: 2rem;
+  color: var(--color-white);
+  border: none;
+  outline: none;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.buttonBlue {
+  background-color: var(--color-blue);
+}
+
+.buttonBlue:hover {
+  background-color: var(--color-dark-blue);
+}
+
+.buttonRed {
+  background-color: var(--color-red);
+}
+
+.buttonRed:hover {
+  background-color: var(--color-dark-red);
+}
+
+.buttonGray {
+  background-color: var(--color-500-gray);
+}
+
+.buttonGray:hover {
+  background-color: var(--color-900-gray);
+}

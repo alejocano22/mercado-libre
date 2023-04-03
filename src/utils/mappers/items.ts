@@ -13,6 +13,7 @@ export const toItem = (item: any): ItemI => {
     picture: item.thumbnail,
     condition: item.condition,
     freeShipping: item.shipping?.free_shipping,
+    city: item.seller_address?.city?.name,
   };
 }
 
@@ -35,6 +36,8 @@ export const toDetailedItem = (item: any, description: any): DetailedItemI => {
     freeShipping: item.shipping?.free_shipping,
     description: description.plain_text,
     soldQuantity: item.sold_quantity,
+    link: item.permalink,
+    city: item.seller_address?.city?.name,
   };
 };
 

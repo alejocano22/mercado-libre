@@ -1,0 +1,20 @@
+.paragraph {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-400-gray);
+}
+
+.paragraphSmall {
+  text-align: right;
+  margin-left: 1rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--color-400-gray);
+}
+
+@media (max-width: 860px) {
+  .paragraphSmall {
+    display: none;
+  }
+}

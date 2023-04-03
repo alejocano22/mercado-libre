@@ -1,5 +1,17 @@
-.title {
-  margin-top: 20rem;
-  text-align: center;
-  color: var(--black-color);
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-bottom: -2rem;
+  padding: 0 4rem;
+}
+
+@media (max-width: 860px) {
+  .innerContainer { 
+    padding: 0 2rem;
+  } 
 }

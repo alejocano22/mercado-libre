@@ -1,6 +1,6 @@
 .searchContainer {
   width: 100%;
-  background-color: var(--yellow-color);
+  background-color: var(--color-yellow);
   position: sticky;
   top: 0;
 }
@@ -24,7 +24,7 @@
 .searchContainer {
   display: flex;
   justify-content: center;
-  background-color: var(--yellow-color);
+  background-color: var(--color-yellow);
 }
 
 .searchForm {
@@ -34,7 +34,7 @@
 
 .searchInput {
   padding: 8px 12px;
-  color: var(--black-color);
+  color: var(--color-black);
   flex-grow: 1;
   height: 100%;
   border: none;
@@ -45,7 +45,7 @@
 }
 
 .searchInput::placeholder {
-  color: var(--gray-400-color);
+  color: var(--color-400-gray);
   opacity: 1; /* Firefox */
 }
 
@@ -58,6 +58,12 @@
   -moz-appearance: none;
   appearance: none;
   padding: 0.6rem;
-  border-left: 1px solid var(--gray-color);
-  background-color: var(--gray-color);
+  border-left: 1px solid var(--color-gray);
+  background-color: var(--color-gray);
+}
+
+@media (max-width: 860px) {
+  .searchInnerContainer {
+    margin: 1rem 2rem;
+  }
 }
